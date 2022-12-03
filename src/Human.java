@@ -1,41 +1,55 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Human {
     private String name;
-    private String age;
-    private TypeRelationship typeRelationship;
+    private int age;
+    private Gender gender;
+    private List<Human> humans = new ArrayList<>();
 
-    /**
-     * Получается при создании человека, создаётся набор параметров по умолчанию. Но он показывает ошибку ссылаясь на метод Communications
-     * @param name
-     * @param age
-     * @param typeRelationship
-     */
-    public Human(String name, String age, TypeRelationship typeRelationship) {
-        this.name = name;
-        this.age = age;
-        this.typeRelationship = typeRelationship;
+    public Human(String name, int age, Gender gender) {
+        setName(name);
+        setAge(age);
+        setGender(gender);
+        humans.add(Human.this);
     }
 
     public String getName() {
         return name;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public TypeRelationship getTypeRelationship() {
-        return typeRelationship;
-    }
-
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
-    public void setAge(String age) {
+    public int getAge() {
+        return age;
+    }
+
+    private void setAge(int age) {
         this.age = age;
     }
 
-    public void setTypeRelationship(TypeRelationship typeRelationship) {
-        this.typeRelationship = typeRelationship;
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public List<Human> getHumans() {
+        return humans;
+    }
+
+    public void setHumans(List<Human> humans) {
+        this.humans = humans;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "humans=" + humans +
+                '}';
     }
 }

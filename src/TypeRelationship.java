@@ -4,5 +4,7 @@ public enum TypeRelationship {
     Son,
     Daughter,
     Brother,
-    Sister
+    Sister,
+    Wife,
+    Husband;
 }

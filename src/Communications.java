@@ -2,10 +2,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Communications {
-    private List<Communications> communications;
+    private Human idHuman;
+    private TypeRelationship idTypeRelationship;
 
-    public Communications(){
-        communications = new ArrayList<>();
-        communications.add(new Human()); // здесь ошибка
+
+
+
+    public Human getIdHuman() {
+        return idHuman;
+    }
+
+    public void setIdHuman(Human idHuman) {
+        this.idHuman = idHuman;
+    }
+
+    public TypeRelationship getIdTypeRelationship() {
+        return idTypeRelationship;
+    }
+
+    public void setIdTypeRelationship(TypeRelationship idTypeRelationship) {
+        this.idTypeRelationship = idTypeRelationship;
     }
 }
+
+
