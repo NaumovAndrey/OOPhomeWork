@@ -12,12 +12,12 @@ public class Human {
         setName(name);
         setAge(age);
         setGender(gender);
+
     }
 
     public Human(List<Human> humans) {
         setHumans();
     }
-
     public static void addHuman(String name, int age, Gender gender) {
         Human piple = new Human(name, age, gender);
         humans.add(piple);
@@ -63,10 +63,6 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
-                '}';
+        return name + ' ' + age + ' ' + gender;
     }
 }

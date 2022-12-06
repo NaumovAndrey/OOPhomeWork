@@ -10,6 +10,9 @@ public class Main {
         Human.addHuman("Фёдорова", 47, Gender.Woman);
 
         Human.printHumanList();
-        //System.out.println(Communications.getHumans());
+        System.out.println(Communications.getHumans());
+
+        //проверяем на поиск элемента в Human
+        Communications.addTypeRelationship("Иванов", TypeRelationship.Husband, "Иванова");
     }
 }

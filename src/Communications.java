@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Communications extends Human{
@@ -24,7 +25,7 @@ public class Communications extends Human{
     public static void setTypeHuman(List<Object> typeHuman) {
         Communications.typeHuman = typeHuman;
     }
-    public static void addTypeRelationship(String name, TypeRelationship typeRelationship, Human firstname){
+    public static void addTypeRelationship(String name, TypeRelationship typeRelationship, String firstname){
 
     }
 }
