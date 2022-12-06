@@ -1,28 +1,30 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Communications {
-    private Human idHuman;
-    private TypeRelationship idTypeRelationship;
+public class Communications extends Human{
 
+    private TypeRelationship typeRelationship;
+    private static List<Object> typeHuman = new ArrayList<>();
 
-
-
-    public Human getIdHuman() {
-        return idHuman;
+    public <humans> Communications() {
+        super(getHumans());
+    }
+    public TypeRelationship getTypeRelationship() {
+        return typeRelationship;
     }
 
-    public void setIdHuman(Human idHuman) {
-        this.idHuman = idHuman;
+    public void setTypeRelationship(TypeRelationship typeRelationship) {
+        this.typeRelationship = typeRelationship;
     }
 
-    public TypeRelationship getIdTypeRelationship() {
-        return idTypeRelationship;
+    public static List<Object> getTypeHuman() {
+        return typeHuman;
     }
 
-    public void setIdTypeRelationship(TypeRelationship idTypeRelationship) {
-        this.idTypeRelationship = idTypeRelationship;
+    public static void setTypeHuman(List<Object> typeHuman) {
+        Communications.typeHuman = typeHuman;
+    }
+    public static void addTypeRelationship(String name, TypeRelationship typeRelationship, Human firstname){
+
     }
 }
-
-

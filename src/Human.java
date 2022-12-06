@@ -5,13 +5,22 @@ public class Human {
     private String name;
     private int age;
     private Gender gender;
-    private List<Human> humans = new ArrayList<>();
+    protected static List<Human> humans = new ArrayList<Human>();
+
 
     public Human(String name, int age, Gender gender) {
         setName(name);
         setAge(age);
         setGender(gender);
-        humans.add(Human.this);
+    }
+
+    public Human(List<Human> humans) {
+        setHumans();
+    }
+
+    public static void addHuman(String name, int age, Gender gender) {
+        Human piple = new Human(name, age, gender);
+        humans.add(piple);
     }
 
     public String getName() {
@@ -38,18 +47,26 @@ public class Human {
         this.gender = gender;
     }
 
-    public List<Human> getHumans() {
+    public static List<Human> getHumans() {
         return humans;
     }
 
-    public void setHumans(List<Human> humans) {
-        this.humans = humans;
+    public static void setHumans() {
+        Human.humans = humans;
+    }
+
+    public static void printHumanList() {
+        for (Object o : getHumans()) {
+            System.out.println(o);
+        }
     }
 
     @Override
     public String toString() {
         return "Human{" +
-                "humans=" + humans +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
                 '}';
     }
 }
